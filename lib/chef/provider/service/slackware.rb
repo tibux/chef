@@ -24,6 +24,8 @@ class Chef
     class Service
       class Slackware < Chef::Provider::Service::Init
 
+        provides :service, os: [ "slackware" ]
+
         include Chef::Mixin::ShellOut
 
         def load_current_resource
